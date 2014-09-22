@@ -49,10 +49,11 @@ end
 deck = new_deck
 puts "I will deal two cards to each of us..."
 puts "" 
-player_cards << deck.pop
-dealer_cards << deck.pop
-player_cards << deck.pop
-dealer_cards << deck.pop
+
+2.times do
+  player_cards << deck.pop
+  dealer_cards << deck.pop
+end  
 
 puts "Player cards: "
 player_cards.each { |card| puts "-> #{card[1]} of #{card[0]}" } 
